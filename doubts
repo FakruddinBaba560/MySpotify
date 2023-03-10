@@ -1,0 +1,17 @@
+let address=songlist[i].songpath
+     element.addEventListener("click",()=>{
+        makeallclear();
+
+     element.getElementsByTagName("i")[0].classList.toggle('fa-play-circle-o')
+      element.getElementsByTagName("i")[0].classList.toggle('fa-pause-circle-o')
+      song.src = address
+      range.value=0
+      song.play()
+      forward.addEventListener("click",()=>{
+         makeallclear();
+         
+         address=songlist[i+=1].songpath
+         song.src = address
+         song.play()
+      range.value=0
+      })
